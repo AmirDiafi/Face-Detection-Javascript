@@ -20,9 +20,10 @@ goLiveBtn.onclick = function () {
     goLive()
 }
 
+
 video.addEventListener('play', () => {
     const canvas = faceapi.createCanvasFromMedia(video)
-    document.body.append(canvas)
+    document.getElementById('the-video').append(canvas)
     const displaySize = { width: video.width, height: video.height }
     faceapi.matchDimensions(canvas, displaySize)
     setInterval(async () => {
